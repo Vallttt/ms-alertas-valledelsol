@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Valle del Sol - Central</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen color="light">
+  <ion-header collapse="condense">
+    <ion-toolbar color="danger">
+      <ion-title size="large">Valle del Sol</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Resumen -->
+  <div class="estado-container">
+    <h2 class="estado-titulo">Estado Comunal</h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card color="warning" class="card-resumen">
+            <ion-card-header class="card-header-icon">
+              <ion-icon name="warning-outline" class="icon-large"></ion-icon>
+            </ion-card-header>
+            <ion-card-content>
+              <h2><strong>3</strong></h2>
+              <p>Alertas Activas</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card color="danger" class="card-resumen">
+            <ion-card-header class="card-header-icon">
+              <ion-icon name="flame-outline" class="icon-large"></ion-icon>
+            </ion-card-header>
+            <ion-card-content>
+              <h2><strong>1</strong></h2>
+              <p>Foco Detectado</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Panel táctico -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Sector Plaza Central</ion-card-subtitle>
+      <ion-card-title>Reporte Crítico</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-badge color="danger" class="badge-prioridad">
+        PRIORIDAD ALTA
+      </ion-badge>
+
+      <p>
+        Se reporta gran columna de humo cerca del parque.
+        Equipos pre-desplegados.
+      </p>
+
+      <br />
+
+      <img
+        src="https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=2070&auto=format&fit=crop"
+        alt="Incendio forestal"
+        class="imagen-incendio"
+      />
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Brigadas -->
+  <ion-card color="success">
+    <ion-card-header>
+      <ion-icon name="shield-checkmark-outline" class="brigada-icon"></ion-icon>
+      <ion-card-title>Brigadas Terrestres</ion-card-title>
+      <ion-card-subtitle>Unidades disponibles para despacho</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Actualmente contamos con <strong>4 cuadrillas</strong>
+      listas en cuarteles para ser movilizadas por la subdirección.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

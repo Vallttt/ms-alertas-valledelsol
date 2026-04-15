@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/tab2/tab2.page.scss"],
+  "sourcesContent": ["/* Tab2 - Reportar Incidente */\n\n.reporte-card {\n  margin: 20px 16px;\n  border-radius: 16px;\n  border-top: 3px solid #F57C00;\n\n  ion-card-title {\n    font-size: 1.15rem;\n    font-weight: 700;\n    color: #2D2D2D;\n  }\n}\n\n.form-item {\n  margin-bottom: 14px;\n  --border-radius: 12px;\n  --padding-start: 14px;\n  --inner-padding-end: 14px;\n\n  ion-label {\n    font-size: 0.8rem !important;\n    font-weight: 600;\n    text-transform: uppercase;\n    letter-spacing: 0.5px;\n    color: #78909C !important;\n    margin-bottom: 4px;\n  }\n}\n\n.btn-enviar {\n  margin-top: 24px;\n  --background: linear-gradient(135deg, #E65100 0%, #F57C00 100%);\n  --background-hover: #ca4700;\n  --border-radius: 12px;\n  --box-shadow: 0 4px 16px rgba(230, 81, 0, 0.25);\n  font-weight: 700;\n  font-size: 0.85rem;\n  letter-spacing: 0.5px;\n  height: 48px;\n}\n"],
+  "mappings": ";AAEA,CAAA;AACE,UAAA,KAAA;AACA,iBAAA;AACA,cAAA,IAAA,MAAA;;AAEA,CALF,aAKE;AACE,aAAA;AACA,eAAA;AACA,SAAA;;AAIJ,CAAA;AACE,iBAAA;AACA,mBAAA;AACA,mBAAA;AACA,uBAAA;;AAEA,CANF,UAME;AACE,aAAA;AACA,eAAA;AACA,kBAAA;AACA,kBAAA;AACA,SAAA;AACA,iBAAA;;AAIJ,CAAA;AACE,cAAA;AACA;IAAA;MAAA,MAAA;MAAA,QAAA,EAAA;MAAA,QAAA;AACA,sBAAA;AACA,mBAAA;AACA,gBAAA,EAAA,IAAA,KAAA,KAAA,GAAA,EAAA,EAAA,EAAA,CAAA,EAAA;AACA,eAAA;AACA,aAAA;AACA,kBAAA;AACA,UAAA;;",
+  "names": []
+}
