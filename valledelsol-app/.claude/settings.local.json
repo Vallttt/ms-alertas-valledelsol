@@ -100,7 +100,10 @@
       "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/dashboard/stats\" -Method GET -UseBasicParsing; $r.Content | ConvertFrom-Json | Select-Object brigadasActivas, totalIncendios)",
       "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/dashboard/stats\" -Method GET -UseBasicParsing; Write-Host $r.Content)",
       "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/mapa/api/brigades\" -Method GET -UseBasicParsing; $data = $r.Content | ConvertFrom-Json; $data.data | Select-Object name, status)",
-      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/mapa/api/brigades\" -Method GET -UseBasicParsing; Write-Host $r.Content)"
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/mapa/api/brigades\" -Method GET -UseBasicParsing; Write-Host $r.Content)",
+      "PowerShell(docker stop valledelsol-postgres)",
+      "PowerShell(docker rm valledelsol-postgres)",
+      "PowerShell(Start-Sleep -Seconds 5; $r = Invoke-WebRequest -Uri \"http://localhost:8000/api/dashboard/stats\" -Method GET -UseBasicParsing; Write-Host $r.Content)"
     ]
   }
 }
