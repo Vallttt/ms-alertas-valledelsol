@@ -103,7 +103,17 @@
       "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:8000/api/mapa/api/brigades\" -Method GET -UseBasicParsing; Write-Host $r.Content)",
       "PowerShell(docker stop valledelsol-postgres)",
       "PowerShell(docker rm valledelsol-postgres)",
-      "PowerShell(Start-Sleep -Seconds 5; $r = Invoke-WebRequest -Uri \"http://localhost:8000/api/dashboard/stats\" -Method GET -UseBasicParsing; Write-Host $r.Content)"
+      "PowerShell(Start-Sleep -Seconds 5; $r = Invoke-WebRequest -Uri \"http://localhost:8000/api/dashboard/stats\" -Method GET -UseBasicParsing; Write-Host $r.Content)",
+      "PowerShell(Wait-Event -Timeout 30)",
+      "Bash(powershell -command \"Get-Content 'C:\\\\Users\\\\Valentina\\\\Desktop\\\\Valle del Sol\\\\valledelsol-android\\\\angular.json' | Select-String -Pattern 'android|fileReplacements|environment' -Context 0,2 | Select-Object -First 40\")",
+      "Bash(powershell -command \"Select-String -Path 'C:\\\\Users\\\\Valentina\\\\Desktop\\\\Valle del Sol\\\\valledelsol-android\\\\www\\\\main-*.js' -Pattern '10\\\\.0\\\\.2\\\\.2|localhost:8000' | Select-Object -First 5\")",
+      "Bash(powershell -command \"Get-ChildItem 'C:\\\\Users\\\\Valentina\\\\Desktop\\\\Valle del Sol\\\\valledelsol-android\\\\www\\\\' | Select-Object Name, LastWriteTime | Sort-Object LastWriteTime -Descending | Select-Object -First 10\")",
+      "Bash(powershell -command \"Get-ChildItem 'C:\\\\Users\\\\Valentina\\\\Desktop\\\\Valle del Sol\\\\valledelsol-android\\\\android\\\\app\\\\src\\\\main\\\\assets\\\\public' -ErrorAction SilentlyContinue | Select-Object Name, LastWriteTime | Select-Object -First 10\")",
+      "Bash(findstr /I \"error ERROR warn WARN exception insert\")",
+      "Bash(Select-String -Pattern \"ERROR|WARN|Exception|insert|register\")",
+      "Bash(Select-Object -Last 20)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }

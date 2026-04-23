@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Despacho de Alertas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen color="light">
+  <ion-header collapse="condense">
+    <ion-toolbar color="danger">
+      <ion-title size="large">Alertas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="alerta-card">
+    <ion-card-header>
+      <ion-card-title>Emitir Alerta a Ciudadanía</ion-card-title>
+      <ion-text color="medium">
+        <p>
+          Esta alerta será procesada por el API Gateway
+          y enviada al microservicio de alertas.
+        </p>
+      </ion-text>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="form-item">
+        <ion-label position="stacked">
+          Tipología de Alerta
+        </ion-label>
+        <ion-select [(ngModel)]="tipo">
+          <ion-select-option value="SMS">Notificación SMS</ion-select-option>
+          <ion-select-option value="EMAIL">Correo Electrónico</ion-select-option>
+          <ion-select-option value="PUSH">App Móvil (Push)</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="stacked">
+          Destinatario
+        </ion-label>
+        <ion-input
+          placeholder="Ej. +56912345678"
+          [(ngModel)]="destinatario"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item class="form-item">
+        <ion-label position="stacked">
+          Mensaje Oficial
+        </ion-label>
+        <ion-textarea
+          [rows]="4"
+          placeholder="Escribe la alerta oficial..."
+          [(ngModel)]="mensaje"
+        ></ion-textarea>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        color="danger"
+        size="large"
+        class="btn-alerta"
+        (click)="enviarAlerta()"
+        [disabled]="loading"
+      >
+        <ion-icon slot="end" name="paper-plane-outline"></ion-icon>
+        {{ loading ? 'Transmitiendo...' : 'DISPARAR ALERTA' }}
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-toast
+    [isOpen]="showToast"
+    (didDismiss)="showToast = false"
+    [message]="'¡Alerta ' + tipo + ' enviada con éxito!'"
+    [duration]="3000"
+    color="success"
+    position="bottom"
+  ></ion-toast>
+
+  <ion-toast
+    [isOpen]="errorToast"
+    (didDismiss)="errorToast = false"
+    message="Error al enviar la alerta o faltan campos."
+    [duration]="3000"
+    color="danger"
+    position="bottom"
+  ></ion-toast>
+</ion-content>

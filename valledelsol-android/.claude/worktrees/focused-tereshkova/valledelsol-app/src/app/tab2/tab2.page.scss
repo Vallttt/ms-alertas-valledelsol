@@ -1,0 +1,47 @@
+/* Tab2 - Reportar Incidente */
+
+.reporte-card {
+  margin: 20px 16px;
+  border-radius: 18px;
+  border: none;
+  border-top: 4px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #FF9500, #FFC300);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+}
+
+.form-item {
+  margin-bottom: 14px;
+  --border-radius: 14px;
+  --padding-start: 14px;
+  --inner-padding-end: 14px;
+
+  ion-label {
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #999 !important;
+    margin-bottom: 4px;
+  }
+}
+
+.btn-enviar {
+  margin-top: 28px;
+  --background: linear-gradient(135deg, #FF9500 0%, #FFAD00 50%, #FFC300 100%);
+  --background-hover: #e08300;
+  --color: #000;
+  --border-radius: 14px;
+  --box-shadow: 0 6px 24px rgba(255, 149, 0, 0.35);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  height: 52px;
+  transition: box-shadow 0.2s ease;
+}
