@@ -113,7 +113,10 @@
       "Bash(Select-String -Pattern \"ERROR|WARN|Exception|insert|register\")",
       "Bash(Select-Object -Last 20)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(dir \"C:\\\\Users\\\\Valentina\\\\Desktop\\\\Valle del Sol\\\\SolAlertas\\\\src\\\\main\\\\java\\\\com\\\\vallesol\\\\alertas\" /s /b)",
+      "Bash(findstr \".java\")",
+      "Bash(docker info *)"
     ]
   }
 }
