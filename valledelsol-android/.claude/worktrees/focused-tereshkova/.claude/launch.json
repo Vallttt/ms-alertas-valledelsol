@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Ionic Angular Dev Server",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["ng", "serve", "--project", "app"],
+      "port": 4200
+    }
+  ]
+}

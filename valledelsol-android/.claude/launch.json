@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Ionic Dev Server (ionic serve)",
+      "runtimeExecutable": "ionic",
+      "runtimeArgs": ["serve"],
+      "port": 8100
+    },
+    {
+      "name": "Angular Dev Server (ng serve)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "port": 4200
+    },
+    {
+      "name": "Karma Test Runner (ng test)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["test"],
+      "port": 9876
+    }
+  ]
+}
