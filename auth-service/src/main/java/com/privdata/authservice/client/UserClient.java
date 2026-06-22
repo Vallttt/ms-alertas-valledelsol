@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
+import org.springframework.core.ParameterizedTypeReference;
+import com.privdata.authservice.dto.response.ApiResponse;
 
 @Component
 @RequiredArgsConstructor
@@ -16,10 +18,12 @@ public class UserClient {
     private String userServiceUrl;
 
     public UserAuthResponseDTO findByEmail(String email) {
-        return restClient.get()
+        ApiResponse<UserAuthResponseDTO> response = restClient.get()
                 .uri(userServiceUrl + "/api/users/internal?email=" + email)
                 .retrieve()
-                .body(UserAuthResponseDTO.class);
+                .body(new ParameterizedTypeReference<ApiResponse<UserAuthResponseDTO>>() {});
+
+        return response != null ? response.getData() : null;
     }
 
     
