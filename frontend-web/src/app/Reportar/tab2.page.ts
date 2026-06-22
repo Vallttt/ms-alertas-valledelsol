@@ -355,18 +355,24 @@ export class Tab2Page {
   //  REPORTE DETAIL PANEL (solo admins)
   // ------------------------------------------------------------------ //
 
+  
   openReporteDetalle(reporte: ReporteResponse) {
     this.reporteSeleccionado = reporte;
     this.mediaDelReporte = [];
     this.lightboxIndex = -1;
+    this.cargandoMedia = true;
 
-    if (reporte.mediaCount > 0) {
-      this.cargandoMedia = true;
-      this.reportService.obtenerMedia(reporte.id).subscribe({
-        next: (items) => { this.mediaDelReporte = items; this.cargandoMedia = false; },
-        error: (err) => { console.warn('Could not load media', err); this.cargandoMedia = false; }
-      });
-    }
+    this.reportService.obtenerReporteCompleto(reporte.id).subscribe({
+      next: (completo: ReporteResponse & { evidencias: ReporteMediaItem[] }) => {
+        this.reporteSeleccionado = completo;
+        this.mediaDelReporte = completo.evidencias ?? [];
+        this.cargandoMedia = false;
+      },
+      error: (err: any) => {
+        console.warn('Could not load full report', err);
+        this.cargandoMedia = false;
+      }
+    });
   }
 
   closeReporteDetalle() {
